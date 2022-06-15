@@ -18,14 +18,18 @@ TypeTreater::TypeTreater( char *arg )
 {
     this->argAnalyse(arg);
     if (TypeTreater::verbose)
+    {
         std::cout << "Char* constructor for TypeTreater called" << std::endl;
+    }
 	return;
 }
 
 TypeTreater::TypeTreater( const TypeTreater &src )
 {
     if (TypeTreater::verbose)
+    {
 		std::cout << "Copy constructor for TypeTreater called" << std::endl;
+    }
 	*this = src;
 	return;
 }
@@ -33,7 +37,9 @@ TypeTreater::TypeTreater( const TypeTreater &src )
 TypeTreater::~TypeTreater( void )
 {
 	if (TypeTreater::verbose)
+    {
 		std::cout << "Destructor for TypeTreater called" << std::endl;
+    }
 	return;
 }
 

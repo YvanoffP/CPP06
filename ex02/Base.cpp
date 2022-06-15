@@ -56,7 +56,7 @@ void identify ( Base &p ) {
         (void)a;
 		return ;
 	}
-	catch (std::bad_cast) {
+	catch (std::bad_cast const&) {
 		std::cout << "Type is not A ... Trying B" << std::endl;
 	}
 
@@ -66,7 +66,7 @@ void identify ( Base &p ) {
         (void)b;
 		return ;
 	}
-	catch (std::bad_cast) {
+	catch (std::bad_cast const&) {
 		std::cout << "Type is not B ... Trying C" << std::endl;
 	}
 
@@ -76,7 +76,7 @@ void identify ( Base &p ) {
         (void)c;
 		return ;
 	}
-	catch (std::bad_cast) {
+	catch (std::bad_cast const&) {
 		std::cout << "Type is not C. Object passed is not a sublass of Base !" << std::endl;
 	}
 }
